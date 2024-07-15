@@ -21,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.ENUM,
         values: [ADMIN, CUSTOMER, FLIGHT_COMPANY],
+        allowNull: false,
+        defaultValue: CUSTOMER,
       },
-      allowNull: false,
-      defaultValue: CUSTOMER,
     },
     {
       sequelize,

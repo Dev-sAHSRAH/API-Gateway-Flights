@@ -18,6 +18,7 @@ async function createUser(req, res) {
 
     return res.status(StatusCodes.CREATED).json(SuccessResponse);
   } catch (error) {
+    console.log(error);
     ErrorResponse.error = error;
     return res.status(error.statusCode).json(ErrorResponse);
   }
