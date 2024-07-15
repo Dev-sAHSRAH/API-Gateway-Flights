@@ -22,4 +22,13 @@ function createToken(payload) {
   }
 }
 
-module.exports = { checkPassword, createToken };
+function verifyToken(token) {
+  try {
+    return jwt.verify(token, ServerConfig.JWT_SECRET);
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+module.exports = { checkPassword, createToken, verifyToken };
