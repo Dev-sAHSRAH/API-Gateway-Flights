@@ -33,7 +33,7 @@ app.use(
 
 app.get("/home",(req,res) => {
   return res.json({message: "OK"});
-};
+});
 
 app.use("/api", apiRoutes);
 
